@@ -22,7 +22,7 @@ def start_message(message):
     #Проверка на наличие пользователя в базе данных
     if check_user:
         products = db.get_pr_name_id()
-        bot.send_message(user_id, 'Добро пожаловать!',reply_markup=telebot.types.ReplyKeyboardRemove())
+        bot.send_message(user_id, 'Добро пожаловать в мой магазин!',reply_markup=telebot.types.ReplyKeyboardRemove())
         bot.send_message(user_id, 'Выберите пункт меню:',reply_markup=buttons.main_menu_buttons(products))
 
     else:
